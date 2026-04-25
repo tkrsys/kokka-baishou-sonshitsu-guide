@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国家賠償法・損失補償 完全解説ガイド</title>
+<style>
+:root{--bg:#f7f9fc;--bg2:#eff3f8;--surface:#fff;--border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);--text:#1c1e21;--text2:#5a5d63;--text3:#9ca0a8;--blue:#1a56db;--blue-bg:#e1effe;--blue-text:#0c3d9f;--teal:#0d9488;--teal-bg:#ccfbf1;--teal-text:#0f766e;--amber-bg:#fef3c7;--amber-text:#d97706;--red:#dc2626;--red-bg:#fecaca;--red-text:#dc2626;--purple:#7c3aed;--purple-bg:#ede9fe;--purple-text:#5b21b6;--green:#059669;--green-bg:#d1fae5;--green-text:#047857;--gold:#f59e0b;--gold-bg:#fef3c7;--gold-text:#92400e;--orange:#ea580c;--orange-bg:#ffedd5;--orange-text:#9a3412;--r:12px;--rsm:8px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.7;min-height:100vh;}
+.header{background:linear-gradient(135deg,var(--red),#b91c1c);color:#fff;padding:1.5rem 1.25rem;position:sticky;top:0;z-index:20;box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+.header-content{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap;}
+.header-left{display:flex;align-items:center;gap:12px;}
+.header-icon{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(8px);}
+.header-title{font-size:18px;font-weight:700;margin-bottom:2px;}
+.header-sub{font-size:12px;opacity:0.9;}
+.header-badge{font-size:11px;padding:4px 12px;border-radius:20px;background:rgba(255,255,255,0.2);backdrop-filter:blur(8px);white-space:nowrap;}
+.nav-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 1.25rem;position:sticky;top:89px;z-index:19;}
+.nav-content{max-width:1200px;margin:0 auto;display:flex;overflow-x:auto;gap:0;}.nav-content::-webkit-scrollbar{display:none;}
+.nav-item{padding:12px 16px;border-bottom:3px solid transparent;cursor:pointer;font-size:13px;font-weight:500;color:var(--text2);white-space:nowrap;transition:all .2s;border-radius:8px 8px 0 0;}
+.nav-item:hover{color:var(--red-text);background:var(--red-bg);}
+.nav-item.active{color:var(--red-text);border-bottom-color:var(--red);background:var(--red-bg);}
+.search-bar{padding:1rem 1.25rem;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:134px;z-index:18;}
+.search-content{max-width:1200px;margin:0 auto;}.search-wrap{position:relative;max-width:600px;}
+.search-input{width:100%;padding:10px 16px 10px 44px;border:1px solid var(--border2);border-radius:24px;background:var(--bg);font-size:14px;color:var(--text);outline:none;font-family:inherit;transition:all .2s;}
+.search-input:focus{border-color:var(--red);background:var(--surface);box-shadow:0 0 0 3px rgba(220,38,38,0.1);}
+.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text3);}
+.search-count{font-size:12px;color:var(--text3);margin-top:8px;}
+.content{max-width:1200px;margin:0 auto;padding:1.5rem 1.25rem;}
+.flow-section{background:var(--surface);border-radius:var(--r);border:1px solid var(--border);overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,0.04);margin-bottom:2rem;}
+.flow-header{padding:1.25rem 1.5rem;background:linear-gradient(135deg,var(--red-bg),var(--orange-bg));border-bottom:1px solid var(--border);}
+.flow-title{font-size:17px;font-weight:700;color:var(--red-text);margin-bottom:4px;}
+.flow-desc{font-size:12px;color:var(--text2);}
+.art-group{border-bottom:1px solid var(--border);}.art-group:last-child{border-bottom:none;}
+.art-group-header{padding:1rem 1.5rem;background:var(--bg2);cursor:pointer;display:flex;align-items:center;justify-content:space-between;transition:background .2s;}
+.art-group-header:hover{background:#e5e7eb;}
+.art-group-title{font-size:15px;font-weight:600;}.art-group-count{font-size:11px;color:var(--text3);background:var(--surface);padding:2px 8px;border-radius:12px;}
+.art-group-arrow{font-size:12px;color:var(--text3);transition:transform .2s;}
+.art-group.open .art-group-arrow{transform:rotate(90deg);}
+.art-group-body{display:none;}.art-group.open .art-group-body{display:block;}
+.art-item{border-bottom:0.5px solid var(--border);cursor:pointer;}.art-item:last-child{border-bottom:none;}
+.art-header{padding:14px 1.5rem;display:flex;align-items:flex-start;gap:12px;transition:background .2s;}
+.art-header:hover{background:var(--bg);}.art-item.open .art-header{background:var(--bg);}
+.art-num{min-width:56px;height:32px;border-radius:var(--rsm);background:var(--red-bg);color:var(--red-text);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;}
+.art-title-text{flex:1;font-size:14px;font-weight:500;line-height:1.5;}
+.art-badge{font-size:10px;padding:2px 8px;border-radius:12px;margin-left:8px;white-space:nowrap;}
+.badge-important{background:var(--red-bg);color:var(--red-text);}
+.badge-frequent{background:var(--amber-bg);color:var(--amber-text);}
+.badge-basic{background:var(--teal-bg);color:var(--teal-text);}
+.art-arrow{font-size:12px;color:var(--text3);margin-left:auto;transition:transform .2s;}
+.art-item.open .art-arrow{transform:rotate(90deg);}
+.art-detail{display:none;padding:0 1.5rem 20px 80px;background:var(--bg);}
+.art-item.open .art-detail{display:block;}
+.art-text{background:var(--surface);border-radius:var(--rsm);border:1px solid var(--border);overflow:hidden;margin-bottom:16px;}
+.art-text-header{padding:12px 16px;background:var(--red-bg);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.art-text-title{font-size:13px;font-weight:600;color:var(--red-text);}
+.art-links{display:flex;gap:6px;}
+.egov-link,.api-link{font-size:11px;padding:4px 8px;border-radius:4px;text-decoration:none;transition:all .2s;color:white;}
+.egov-link{background:var(--blue);}.egov-link:hover{background:#1e40af;}
+.api-link{background:var(--red);}.api-link:hover{background:#b91c1c;}
+.art-text-body{padding:16px;font-family:'Hiragino Mincho ProN','Yu Mincho','serif';font-size:13px;line-height:1.8;white-space:pre-line;color:var(--text);}
+.explanations{display:flex;flex-direction:column;gap:12px;}
+.exp-item{border-radius:var(--rsm);border:1px solid var(--border);overflow:hidden;}
+.exp-header{padding:10px 14px;font-size:11px;font-weight:600;}
+.exp-body{padding:14px;font-size:13px;line-height:1.7;}
+.exp-practical{background:var(--surface);}.exp-practical .exp-header{background:var(--red-bg);color:var(--red-text);}
+.exp-beginner{background:var(--teal-bg);}.exp-beginner .exp-header{color:var(--teal-text);}
+.exp-exam{background:var(--amber-bg);}.exp-exam .exp-header{color:var(--amber-text);}
+.no-results{padding:4rem 2rem;text-align:center;color:var(--text3);font-size:15px;}
+.footer{margin-top:3rem;padding:2rem 1.25rem;border-top:1px solid var(--border);background:var(--bg2);text-align:center;}
+.footer-content{max-width:1200px;margin:0 auto;font-size:12px;color:var(--text3);line-height:1.6;}
+@media(max-width:768px){.art-detail{padding-left:1.5rem;}.header-content{flex-direction:column;align-items:flex-start;gap:12px;}.nav-content{padding:0 4px;}.art-links{flex-direction:column;width:100%;}}
+</style>
+</head>
+<body>
+<div class="header"><div class="header-content"><div class="header-left"><div class="header-icon">🛡️</div><div><div class="header-title">国家賠償法・損失補償 完全解説ガイド</div><div class="header-sub">国家賠償法全6条＋損失補償制度 | e-Gov API対応</div></div></div><span class="header-badge">全15項目完成！</span></div></div>
+<div class="nav-bar"><div class="nav-content" id="navTabs"></div></div>
+<div class="search-bar"><div class="search-content"><div class="search-wrap"><span class="search-icon">🔍</span><input class="search-input" id="searchInput" type="text" placeholder="条文内容・解説・キーワードで検索..." oninput="doSearch()"></div><div class="search-count" id="searchCount"></div></div></div>
+<div class="content" id="mainContent"></div>
+<div class="footer"><div class="footer-content">法令根拠：国家賠償法（e-Gov法令検索 https://laws.e-gov.go.jp/law/322AC0000000125）<br>損失補償：日本国憲法第29条第3項<br>本ガイドは学習・実務参考情報です。正確な条文はe-Gov法令検索で必ずご確認ください。<br><br>Copyright &copy; 2026 tkrsys All rights reserved.</div></div>
+<script>
+const FLOW_SECTIONS = [
+  {
+    "id": "kokubai",
+    "title": "国家賠償法",
+    "desc": "公権力の行使・公の営造物の瑕疵に基づく賠償責任（第1条～第6条）",
+    "groups": [
+      {
+        "title": "国家賠償法",
+        "articles": [
+          {
+            "num": "1",
+            "title": "公権力の行使に基づく損害賠償責任",
+            "importance": "important",
+            "chapter": "国家賠償法",
+            "text": "（公権力の行使に基づく損害賠償責任）\n第一条　国又は公共団体の公権力の行使に当る公務員が、その職務を行うについて、故意又は過失によつて違法に他人に損害を加えたときは、国又は公共団体が、これを賠償する責に任ずる。\n２　前項の場合において、公務員に故意又は重大な過失があつたときは、国又は公共団体は、その公務員に対して求償権を有する。",
+            "practical": "国家賠償法の中核規定。要件は①公権力の行使②公務員③職務を行うについて④故意又は過失⑤違法⑥損害⑦因果関係の7つ。代位責任説が通説・判例。公務員個人は被害者に対し直接責任を負わない（最判昭30.4.19）。「公権力の行使」は広義説（2条・私経済作用以外の全行政作用）が通説。求償権は故意又は重大な過失の場合のみ（軽過失では求償不可）。",
+            "beginner": "公務員が仕事中に故意や過失で違法に他人に損害を与えた場合、公務員個人ではなく、国や自治体が賠償責任を負います。\n\n要件：①公権力の行使に当たる行為②公務員の行為③仕事中の行為④故意又は過失⑤違法であること⑥損害が発生⑦因果関係\n\n公務員に故意又は重大な過失があれば、国等は公務員に対して「お金を返せ」と求償できます（軽過失ではNG）。",
+            "exam": "7要件は必須暗記。「公権力の行使」の広義説、代位責任説、公務員個人の責任否定（最判昭30.4.19）、求償権の要件（故意・重過失）は超頻出。"
+          },
+          {
+            "num": "2",
+            "title": "公の営造物の設置管理の瑕疵に基づく損害賠償責任",
+            "importance": "important",
+            "chapter": "国家賠償法",
+            "text": "（公の営造物の設置管理の瑕疵に基づく損害賠償責任）\n第二条　道路、河川その他の公の営造物の設置又は管理に瑕疵があつたために他人に損害を生じたときは、国又は公共団体は、これを賠償する責に任ずる。\n２　前項の場合において、他に損害の原因について責に任ずべき者があるときは、国又は公共団体は、これに対して求償権を有する。",
+            "practical": "無過失責任（故意・過失を問わない）を定めた規定。要件は①公の営造物②設置又は管理の瑕疵③損害④因果関係。「公の営造物」は有体物に限らず広く解する（判例）。「瑕疵」は通常有すべき安全性を欠いていることを意味する客観説が判例・通説。道路の穴ぼこ（最判昭45.8.20）、高知落石事件（最判昭45.8.20）、大東水害訴訟（最判昭59.1.26）等が重要判例。機能的瑕疵（空港騒音：最大判昭56.12.16大阪空港訴訟）も含む。",
+            "beginner": "道路、河川などの公共施設（公の営造物）に欠陥があって他人に損害を与えた場合、国や自治体は賠償責任を負います。\n\n特徴：\n・故意や過失は不要（無過失責任）\n・欠陥（瑕疵）＝通常備えるべき安全性を欠いていること\n\n例：道路の穴に車が落ちた、河川の管理不備で洪水被害が出た、など",
+            "exam": "無過失責任の性質、「公の営造物」の意味、「瑕疵」の客観説は超頻出。道路瑕疵、河川瑕疵（大東水害訴訟等）、機能的瑕疵の判例群は必須。"
+          },
+          {
+            "num": "3",
+            "title": "費用負担者の損害賠償責任",
+            "importance": "frequent",
+            "chapter": "国家賠償法",
+            "text": "（費用負担者の損害賠償責任）\n第三条　前二条の規定によつて国又は公共団体が損害を賠償する責に任ずる場合において、公務員の選任若しくは監督又は公の営造物の設置若しくは管理に当る者と公務員の俸給、給与その他の費用又は公の営造物の設置若しくは管理の費用を負担する者とが異なるときは、費用を負担する者もまた、その損害を賠償する責に任ずる。\n２　前項の場合において、損害を賠償した者は、内部関係でその損害を賠償する責任ある者に対して求償権を有する。",
+            "practical": "選任監督者と費用負担者が異なる場合の責任分配規定。被害者は費用負担者にも賠償請求可能。内部求償権も規定。例：都道府県費負担教職員の行為について市町村と都道府県のどちらが賠償責任を負うか等の問題。",
+            "beginner": "公務員を管理する者と給料を払う者が異なる場合、給料を払っている方（費用負担者）にも賠償責任があります。\n\n例：県の費用で雇われている教員が市立学校で問題を起こした場合→市と県のどちらにも請求可能",
+            "exam": "選任監督者と費用負担者が異なる場合の処理が出題ポイント。内部求償権も重要。"
+          },
+          {
+            "num": "4",
+            "title": "民法の適用",
+            "importance": "important",
+            "chapter": "国家賠償法",
+            "text": "（民法の適用）\n第四条　国又は公共団体の損害賠償の責任については、前三条の規定によるの外、民法の規定による。",
+            "practical": "国家賠償法に規定がない事項は民法が補充的に適用されることを明示。消滅時効、損害賠償の範囲（民法416条類推）、過失相殺（民法722条2項）、失火責任法の適用（最判昭53.7.17）等が問題となる。",
+            "beginner": "国家賠償法に定めがない部分は、民法のルールが使われます。\n\n例：時効（民法724条）、損害額の計算方法、被害者側の過失との相殺など",
+            "exam": "民法の補充適用の具体例として、失火責任法の適用（最判昭53.7.17）、消滅時効の適用が重要。"
+          },
+          {
+            "num": "5",
+            "title": "他の法律の適用",
+            "importance": "frequent",
+            "chapter": "国家賠償法",
+            "text": "（他の法律の適用）\n第五条　国又は公共団体の損害賠償の責任について民法以外の他の法律に別段の定があるときは、その定めるところによる。",
+            "practical": "個別法の特別規定が優先することを明示。郵便法の損害賠償責任の制限規定等が問題となる（最大判平14.9.11郵便法免責規定違憲判決）。",
+            "beginner": "他の法律に特別な定めがある場合は、そちらが優先されます。\n\n例：郵便法には特別な賠償責任の定めがありましたが、最高裁で一部違憲と判断されました。",
+            "exam": "郵便法免責規定違憲判決（最大判平14.9.11）は超重要判例。5条の「別段の定」の限界が問われる。"
+          },
+          {
+            "num": "6",
+            "title": "外国人への適用（相互保証主義）",
+            "importance": "frequent",
+            "chapter": "国家賠償法",
+            "text": "（外国人への適用）\n第六条　この法律は、外国人が被害者である場合には、相互の保証があるときに限り、これを適用する。",
+            "practical": "相互保証主義を採用。外国人被害者に対しては、その本国が日本国民に対して同様の賠償責任を認めている場合にのみ適用。相互保証の有無の判断基準が問題となる。",
+            "beginner": "外国人が被害者の場合、その外国人の母国が日本人に対しても同じように賠償する制度を持っている場合にだけ、この法律が適用されます（相互保証主義）。",
+            "exam": "相互保証主義の趣旨と判断基準が出題ポイント。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sonshitsu",
+    "title": "損失補償の基礎",
+    "desc": "憲法29条3項・特別の犠牲・正当な補償（憲法・判例）",
+    "groups": [
+      {
+        "title": "損失補償の基礎",
+        "articles": [
+          {
+            "num": "憲法29",
+            "title": "財産権の保障と損失補償",
+            "importance": "important",
+            "chapter": "損失補償の基礎",
+            "text": "日本国憲法\n第二十九条　財産権は、これを侵してはならない。\n２　財産権の内容は、公共の福祉に適合するやうに、法律でこれを定める。\n３　私有財産は、正当な補償の下に、これを公共のために用ひることができる。",
+            "practical": "損失補償の憲法上の根拠。1項で財産権の不可侵、2項で公共の福祉による内容制限、3項で公用収用の際の正当な補償を規定。「正当な補償」の意味について完全補償説と相当補償説の対立がある。最大判昭28.12.23（農地改革事件）は相当補償説、最判昭48.10.18（土地収用法事件）は完全補償に近い立場。",
+            "beginner": "憲法29条は財産権を保障しつつ、公共のために使う場合は正当な補償をすることを定めています。\n\n1項：財産権は侵害されない（保障）\n2項：公共の福祉で制限できる（制約）\n3項：公共のために使う場合は正当な補償が必要（補償）\n\nこの3項が損失補償制度の根拠です。",
+            "exam": "「正当な補償」の意味（完全補償説vs相当補償説）は超頻出。農地改革事件判例と土地収用法事件判例の違いを整理。"
+          },
+          {
+            "num": "概念",
+            "title": "損失補償の概念と要件",
+            "importance": "important",
+            "chapter": "損失補償の基礎",
+            "text": "損失補償とは、適法な公権力の行使によって加えられた財産上の特別の犠牲に対し、全体的な公平の見地から、これを補償する制度である。",
+            "practical": "損失補償の定義。国家賠償との最大の違いは「適法な」行為による損失である点。要件は①適法な公権力の行使②財産権の侵害③特別の犠牲④補償の必要性。「特別の犠牲」の判断基準は形式的基準（一般的制約か個別的制約か）と実質的基準（制約の程度）の総合判断。",
+            "beginner": "損失補償とは、適法な行政活動（公共事業のための土地収用など）によって個人の財産に特別な損害（特別の犠牲）が生じた場合に、公平の観点から金銭で補償する制度です。\n\n国家賠償との違い：\n・国家賠償＝「違法」な行為への賠償\n・損失補償＝「適法」な行為への補償",
+            "exam": "国家賠償と損失補償の区別は超頻出。「特別の犠牲」の判断基準（形式的基準＋実質的基準）も重要。"
+          },
+          {
+            "num": "直接請求",
+            "title": "法律に補償規定がない場合の直接請求",
+            "importance": "important",
+            "chapter": "損失補償の基礎",
+            "text": "法律に損失補償に関する規定がない場合でも、直接憲法29条3項に基づいて補償請求できるか。\n\n判例（最大判昭43.11.27河川附近地制限令事件）：憲法29条3項を根拠に直接補償請求が可能。",
+            "practical": "補償規定のない法律による財産権制限が「特別の犠牲」に当たる場合、憲法29条3項に基づく直接請求が認められるかという論点。最大判昭43.11.27（河川附近地制限令事件）は、補償規定がなくても違憲無効とはならず、直接憲法29条3項に基づいて補償請求できるとした。補償規定の欠缺は法律全体を違憲にするものではない。",
+            "beginner": "法律に「補償します」という規定がない場合でも、憲法29条3項に直接基づいて国に補償を求めることができます。\n\n最高裁判例（河川附近地制限令事件）：\n「補償規定がなくても法律は違憲にならないが、憲法29条3項に基づいて直接補償請求できる」",
+            "exam": "河川附近地制限令事件（最大判昭43.11.27）は損失補償の最重要判例。直接請求の可否と論理構成を正確に理解。"
+          },
+          {
+            "num": "完全vs相当",
+            "title": "正当な補償の意味",
+            "importance": "important",
+            "chapter": "損失補償の基礎",
+            "text": "「正当な補償」の意味\n\n完全補償説：客観的な市場価格の全額を補償すべき\n相当補償説：合理的に算出された相当な額で足りる\n\n判例：\n・農地改革事件（最大判昭28.12.23）→相当補償説\n・土地収用法事件（最判昭48.10.18）→完全補償に近い立場",
+            "practical": "「正当な補償」について完全補償説と相当補償説が対立。農地改革事件（最大判昭28.12.23）は特殊な社会的経済的事情の下では相当な額で足りるとして相当補償説を採用。一方、土地収用法事件（最判昭48.10.18）は「収用の前後を通じて被収用者の財産価値を等しくならしめるような補償」が必要として完全補償に近い立場。現在は土地収用等の通常の場合は完全補償説が有力。",
+            "beginner": "「正当な補償」とはいくら払えばいいのかについて2つの考え方があります。\n\n①完全補償説：市場価格の全額を払うべき\n②相当補償説：合理的な金額でOK\n\n農地改革のような特殊な場合は相当な額で足りますが、通常の土地収用では完全補償（全額）が必要とされています。",
+            "exam": "完全補償説vs相当補償説の対立と判例の立場は超頻出。2つの最高裁判例の使い分けを理解。"
+          },
+          {
+            "num": "特別犠牲",
+            "title": "特別の犠牲の判断基準",
+            "importance": "important",
+            "chapter": "損失補償の基礎",
+            "text": "特別の犠牲とは、公共のために特定の個人に課された財産上の不利益が、社会生活上一般に受忍すべき限度を超えるものをいう。\n\n判断基準：\n①形式的基準：一般的制約か、特定人に対する制約か\n②実質的基準：財産権の本質を侵害する程度の強度な制約か",
+            "practical": "特別の犠牲の判断は、形式的基準（侵害行為の対象が広く一般人か特定人か）と実質的基準（侵害行為が財産権に内在する社会的制約として受忍すべき限度内か超えるか）を総合して判断する。奈良県ため池条例事件（最大判昭38.6.26）は、ため池堤とうの使用制限は財産権の内在的制約であり補償不要とした。一方、予防接種禍事件では、特定個人への特別の犠牲として補償が認められる余地がある。",
+            "beginner": "損失補償が必要かどうかは「特別の犠牲」に当たるかで決まります。\n\n判断基準：\n①形式的基準：みんなに対する制約？→補償不要 / 特定の人だけの制約？→補償必要\n②実質的基準：軽い制約？→補償不要 / 財産権の本質を侵害する強い制約？→補償必要\n\n両方を総合して判断します。",
+            "exam": "形式的基準と実質的基準の総合判断が重要。奈良県ため池条例事件（内在的制約→補償不要）は必須判例。"
+          },
+          {
+            "num": "国賠と損補",
+            "title": "国家賠償と損失補償の谷間",
+            "importance": "frequent",
+            "chapter": "損失補償の基礎",
+            "text": "国家賠償と損失補償のいずれにも該当しない場合（「谷間」の問題）\n\n①適法だが無過失の公権力行使による損害\n②違法だが過失のない公権力行使による損害\n\n解決策として、国家賠償法の違法性を広く解する（結果違法説）、損失補償で救済する、憲法17条を直接根拠とする等の見解がある。予防接種禍事件が典型例。",
+            "practical": "国家賠償は「違法＋故意過失」、損失補償は「適法＋特別の犠牲」を要件とするため、いずれにも該当しない場合が生じる（谷間の問題）。予防接種禍事件では、接種自体は適法だが副反応による被害が生じた場合の救済が問題となった。学説は①結果違法説で国賠法1条で救済②損失補償類推③憲法17条・29条3項直接適用等を主張。予防接種法改正により被害救済制度が法定化された。",
+            "beginner": "国家賠償にも損失補償にも当てはまらないケースがあります（谷間の問題）。\n\n例：予防接種を受けて副反応が出た場合\n→接種は適法（違法ではない）→国家賠償は？\n→でも個人の犠牲（特別の犠牲）→損失補償は？\n\nこのような場合の救済方法が議論されています。現在は予防接種法で被害救済制度が設けられています。",
+            "exam": "谷間の問題の論点整理は重要。予防接種禍事件と各学説（結果違法説等）を理解。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kobetsu",
+    "title": "損失補償の個別法",
+    "desc": "土地収用法・都市計画法・警察制限（個別法）",
+    "groups": [
+      {
+        "title": "損失補償の個別法",
+        "articles": [
+          {
+            "num": "土地収用",
+            "title": "土地収用法における損失補償",
+            "importance": "frequent",
+            "chapter": "損失補償の個別法",
+            "text": "土地収用法（昭和26年法律第219号）\n\n公共の利益となる事業に必要な土地の収用・使用に関する手続と損失補償を規定。\n\n補償の内容：\n・土地に対する補償（近傍類地の取引価格を基準）\n・建物等の物件に対する補償\n・移転料等の通常受ける損失の補償\n・残地補償\n・事業損失の補償",
+            "practical": "土地収用法は損失補償の最も代表的な個別法。収用委員会が補償額を裁決する。補償基準は近傍類地の取引価格（完全補償に近い）。最判昭48.10.18は「収用の前後を通じて被収用者の財産価値を等しくならしめるような補償」を要求。事業認定→収用裁決→補償金の支払い→所有権移転の手続を経る。生活再建措置も含む。",
+            "beginner": "公共事業（道路・ダム建設等）のために私有地を強制的に取得する場合の手続きと補償を定めた法律です。\n\n補償の内容：\n・土地の値段（近くの土地の取引価格が基準）\n・建物の補償\n・引越し費用\n・残った土地の価値減少分\n\n「取られる前と後で財産の価値が同じになるように」補償します。",
+            "exam": "補償基準（完全補償に近い立場）と最判昭48.10.18の判示内容が重要。"
+          },
+          {
+            "num": "都市計画",
+            "title": "都市計画法における損失補償",
+            "importance": "basic",
+            "chapter": "損失補償の個別法",
+            "text": "都市計画法による建築制限と損失補償\n\n都市計画制限（用途地域指定、市街化調整区域の指定等）による建築制限は、原則として補償不要（一般的制約）。\nただし、都市計画事業の施行に伴う損失は土地収用法に基づき補償。",
+            "practical": "都市計画法による規制は一般的な土地利用規制であり、原則として特別の犠牲に当たらず補償不要。ただし個別的に見て受忍限度を超える場合は補償が必要となりうる。都市計画事業の施行に際しては土地収用法の準用により損失補償がなされる。長期にわたる建築制限の補償の要否は現在も議論がある。",
+            "beginner": "都市計画で建物の建て方が制限される場合は、原則として補償はありません（みんなに対する一般的な制約だから）。\n\nただし、都市計画事業で実際に土地を収用する場合は、土地収用法に基づいて補償されます。",
+            "exam": "都市計画制限が一般的制約（補償不要）か特別の犠牲（補償必要）かの判断が出題ポイント。"
+          },
+          {
+            "num": "警察制限",
+            "title": "警察制限と損失補償",
+            "importance": "basic",
+            "chapter": "損失補償の個別法",
+            "text": "警察制限（消極目的規制）による財産権の制約と損失補償\n\n危険の防止・安全の確保等の消極目的による規制は、原則として補償不要（財産権の内在的制約）。\n\n例：建築基準法の規制、消防法の規制、食品衛生法の営業許可制等",
+            "practical": "消極目的規制（警察制限）は、社会共同生活の維持のために課される最小限度の制約であり、財産権の内在的制約として補償不要が原則。奈良県ため池条例事件（最大判昭38.6.26）はこの典型。ただし、既存の適法な権利を全面的に剥奪する場合等は例外的に補償が必要となりうる。規制目的二分論（消極・積極）との関係も議論される。",
+            "beginner": "危険防止のための規制（消防法、建築基準法など）で財産が制約されても、原則として補償はありません。\n\n理由：そもそも危険な使い方は許されないので、制約は当然のこと（内在的制約）だから。\n\n例：火災予防のため危険物の保管方法を制限→補償なし",
+            "exam": "消極目的規制と積極目的規制の区別、内在的制約と特別の犠牲の関係を理解。奈良県ため池条例事件が重要。"
+          }
+        ]
+      }
+    ]
+  }
+];
+function getEgovUrl(){return'https://laws.e-gov.go.jp/law/322AC0000000125';}
+function getEgovApiUrl(n){return'https://laws.e-gov.go.jp/api/1/articles;lawId=322AC0000000125;article='+n;}
+let currentFlow=FLOW_SECTIONS[0].id,openGroups={},openArticles={},searchQuery='';
+function getImportanceBadge(i){switch(i){case'important':return{text:'重要',class:'badge-important'};case'frequent':return{text:'頻出',class:'badge-frequent'};default:return{text:'基本',class:'badge-basic'};}}
+function matchSearch(a){if(!searchQuery)return true;const q=searchQuery.toLowerCase();return a.title.toLowerCase().includes(q)||a.text.toLowerCase().includes(q)||a.practical.toLowerCase().includes(q)||a.beginner.toLowerCase().includes(q)||(a.exam&&a.exam.toLowerCase().includes(q));}
+function renderNavTabs(){const nav=document.getElementById('navTabs');nav.innerHTML=FLOW_SECTIONS.map(s=>`<div class="nav-item ${currentFlow===s.id?'active':''}" onclick="setFlow('${s.id}')">${s.title}</div>`).join('');}
+function renderContent(){const content=document.getElementById('mainContent');let html='',visibleCount=0;const section=FLOW_SECTIONS.find(s=>s.id===currentFlow);if(!section)return;
+html+=`<div class="flow-section"><div class="flow-header"><div class="flow-title">${section.title}</div><div class="flow-desc">${section.desc}</div></div><div class="flow-body">`;
+section.groups.forEach((group,gi)=>{const gk=`${currentFlow}-${gi}`;const isGroupOpen=openGroups[gk];const visible=group.articles.filter(matchSearch);if(!visible.length)return;
+html+=`<div class="art-group ${isGroupOpen?'open':''}" id="group-${gk}"><div class="art-group-header" onclick="toggleGroup('${gk}')"><div class="art-group-title">${group.title}</div><div style="display:flex;align-items:center;gap:8px;"><span class="art-group-count">${visible.length}項目</span><span class="art-group-arrow">▶</span></div></div><div class="art-group-body"><div class="art-list">`;
+visible.forEach(a=>{const ak=`${gk}-${a.num}`;const isOpen=openArticles[ak];const badge=getImportanceBadge(a.importance);visibleCount++;
+const numLabel=/^\d+$/.test(a.num)?`第${a.num}条`:a.num;
+html+=`<div class="art-item ${isOpen?'open':''}" id="article-${ak}"><div class="art-header" onclick="toggleArticle('${ak}')"><div class="art-num">${numLabel}</div><div class="art-title-text">${a.title}<span class="art-badge ${badge.class}">${badge.text}</span></div><span class="art-arrow">▶</span></div>`;
+if(isOpen){const showApi=/^\d+$/.test(a.num);html+=`<div class="art-detail"><div class="art-text"><div class="art-text-header"><div class="art-text-title">🛡️ 条文・制度解説</div><div class="art-links">${showApi?`<a href="${getEgovApiUrl(a.num)}" target="_blank" class="api-link">API直接取得</a>`:''}<a href="${getEgovUrl()}" target="_blank" class="egov-link">e-Gov法令検索</a></div></div><div class="art-text-body">${a.text}</div></div><div class="explanations"><div class="exp-item exp-practical"><div class="exp-header">📘 実務・試験向け解説</div><div class="exp-body">${a.practical.replace(/\n/g,'<br>')}</div></div><div class="exp-item exp-beginner"><div class="exp-header">🌱 初学者向け解説</div><div class="exp-body">${a.beginner.replace(/\n/g,'<br>')}</div></div>${a.exam?`<div class="exp-item exp-exam"><div class="exp-header">🎯 試験対策ポイント</div><div class="exp-body">${a.exam.replace(/\n/g,'<br>')}</div></div>`:''}</div></div>`;}
+html+=`</div>`;});
+html+=`</div></div></div>`;});
+html+=`</div></div>`;
+if(!visibleCount){html=`<div class="no-results">🔍 「${searchQuery}」に一致する項目が見つかりませんでした。</div>`;}
+content.innerHTML=html;
+const sc=document.getElementById('searchCount');sc.textContent=searchQuery?`${visibleCount}件が見つかりました`:'';}
+function setFlow(id){currentFlow=id;openGroups={};openArticles={};renderNavTabs();renderContent();window.scrollTo(0,0);}
+function toggleGroup(gk){openGroups[gk]=!openGroups[gk];if(!openGroups[gk]){Object.keys(openArticles).forEach(k=>{if(k.startsWith(gk))delete openArticles[k];});}renderContent();}
+function toggleArticle(ak){const wasOpen=openArticles[ak];openArticles={};if(!wasOpen)openArticles[ak]=true;renderContent();if(!wasOpen)setTimeout(()=>{const el=document.getElementById('article-'+ak);if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});},50);}
+function doSearch(){searchQuery=document.getElementById('searchInput').value.trim();openGroups={};openArticles={};renderContent();}
+renderNavTabs();renderContent();
+</script>
+</body>
+</html>
